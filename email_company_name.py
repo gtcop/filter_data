@@ -237,8 +237,8 @@ def company_name_approch():
 
         # Sort the DataFrame based on the original indices
         df_s1 = df_s1.sort_values(by='original_index').reset_index(drop=True)
-        usefull_cols = ["company name", "first name", "email", "status","reason","match_reason"]
-        df_s1 = df_s1[usefull_cols]
+        # usefull_cols = ["company name", "first name", "email", "status","reason","match_reason"]
+        # df_s1 = df_s1[usefull_cols]
         return df_s1
 
     # Function to convert first name to title case
