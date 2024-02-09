@@ -266,13 +266,13 @@ def company_name_approch():
 
                 # Process files
                 processed_data = process_files(convert_to_lowercase(camp_data), convert_to_lowercase(all_clients_data))
-                st.write("Processed Data:")
-                st.write(processed_data)
+                # st.write("Processed Data:")
+                # st.write(processed_data)
 
                 # Convert first name to title case
                 processed_data = convert_first_name_in_title_case(processed_data)
                 st.write("Processed Data with First Name in Title Case:")
-                st.write(processed_data.head())
+                st.write(processed_data)
 
     if __name__ == "__main__":
         main_2()
