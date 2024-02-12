@@ -16,9 +16,9 @@ def email_approch():
             emails = row.split() # Split by space
             return emails
 
-        df['list_of_emails'] = df['email address'].apply(extract_emails)  # Apply the function to create a new column with lists of emails
+        df['list_of_emails'] = df['email'].apply(extract_emails)  # Apply the function to create a new column with lists of emails
         exploded_df = df.explode('list_of_emails')                 # Explode the lists into separate rows
-        exploded_df = exploded_df.drop('email address', axis=1).reset_index(drop=True)   # Drop the original column and reset the index
+        exploded_df = exploded_df.drop('email', axis=1).reset_index(drop=True)   # Drop the original column and reset the index
         return exploded_df
 
     # function to extract the domains from the email address
