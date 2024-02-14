@@ -160,7 +160,7 @@ def company_name_approch():
         return (common_length / longer_word_length) * 100
 
     # Function to process files
-    def process_files(camp_file, all_clients):
+    def process_files(camp_file, all_clients, j):
         df_s1 = camp_file  # Read the campaign file 
         df1 = all_clients   # Read the all clients file
 
@@ -265,7 +265,7 @@ def company_name_approch():
                 st.write(all_clients_data.head())
 
                 # Process files
-                processed_data = process_files(convert_to_lowercase(camp_data), convert_to_lowercase(all_clients_data))
+                processed_data = process_files(convert_to_lowercase(camp_data), convert_to_lowercase(all_clients_data),j)
                 # st.write("Processed Data:")
                 # st.write(processed_data)
 
