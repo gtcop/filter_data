@@ -133,6 +133,7 @@ def email_approch():
                 st.header(f"retrieved email from {a2} data file and arranged in rows")
                 st.write(exploded_df)
                 df_output = process_file(output_file1, exploded_df)
+                df_output = first_name_in_upper_case(df_output)
                 st.header(f"data compared from {a1} and {a2} data file and appended matched or unmatched where the condition matched")
                 st.write(df_output)
                 un_matched, matched = seperate_matched_and_unmatched(df_output)
