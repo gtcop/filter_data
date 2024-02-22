@@ -3,8 +3,9 @@ import streamlit as st
 # function to convert the data of the file into the lower case
 
 def email_approch():
+    
     def convert_into_lowercase(input_file):
-        df = pd.read_csv(input_file)                        #input file 
+        df = pd.read_csv(input_file, encoding='utf-8')                        #input file 
         df.columns = df.columns.str.lower()                 # Convert column names to lowercase
         df = df.apply(lambda x: x.astype(str).str.lower())  # Convert all data to lowercase
         return df
